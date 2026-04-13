@@ -1,0 +1,61 @@
+/* 1. 모든 요소 기본 여백 제거 + 박스 모델 통일 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. 기본 폰트 & 렌더링 개선 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3. 리스트 스타일 제거 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. a 태그 기본 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. 이미지, 비디오 정렬 문제 해결 */
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. 폼 요소 폰트 상속 (중요: input 스타일은 건드리지 않음) */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. 버튼 기본 스타일 정리 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 8. textarea 리사이즈 방향 제한 (선택) */
+textarea {
+  resize: vertical;
+}
